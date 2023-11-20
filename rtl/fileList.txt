@@ -1,0 +1,6 @@
+HTL8237_pkg.vhd
+dreqack_rtl.vhd
+fsm37_fsm.vhd
+channel_rtl.vhd
+blk37_struct.vhd
+htl8237_struct.vhd

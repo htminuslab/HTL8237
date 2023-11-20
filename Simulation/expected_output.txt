@@ -1,0 +1,827 @@
+#  ======================= Init Master 8239 ==================================== 
+#  ======================= Single Transfer Read Test =========================== 
+#  ----------- HTL8237 status before memory to IO transfer -------------------- 
+#  CH0:A=0000 C=0000  CH1:A=0000 C=0000  CH2:A=0000 C=0004  CH3:A=0000 C=0000
+#  MD0:D,A++,  ,VF    MD1:D,A++,  ,VF    MD2:S,A++,  ,RD    MD3:D,A++,  ,VF   
+#  Status=00 Mask=B Request=0 Command=00 Temp=00
+#  Start DMA Test 0 Addr++, 5 bytes, address 10000-10004
+#  DACK2 Asserted
+#    IO DMA Write channel 2 H
+#    CPU has access to the bus
+#  DACK2 Asserted
+#    IO DMA Write channel 2 e
+#    CPU has access to the bus
+#  DACK2 Asserted
+#    IO DMA Write channel 2 l
+#    CPU has access to the bus
+#  DACK2 Asserted
+#    IO DMA Write channel 2 l
+#    CPU has access to the bus
+#  DACK2 Asserted
+#    IO DMA Write channel 2 o
+#  EOP Asserted Channel 2
+#    CPU has access to the bus
+#  ----------- 82C37 status after memory to IO transfer ---------------------- 
+#  CH0:A=0000 C=0000  CH1:A=0000 C=0000  CH2:A=0005 C=FFFF  CH3:A=0000 C=0000
+#  MD0:D,A++,  ,VF    MD1:D,A++,  ,VF    MD2:S,A++,  ,RD    MD3:D,A++,  ,VF   
+#  Status=04 Mask=F Request=0 Command=00 Temp=00
+# 
+#  ----------- HTL8237 status before memory to IO transfer -------------------- 
+#  CH0:A=0000 C=0000  CH1:A=0000 C=0000  CH2:A=0000 C=0004  CH3:A=0000 C=0000
+#  MD0:D,A++,  ,VF    MD1:D,A++,  ,VF    MD2:S,A++,AI,RD    MD3:D,A++,  ,VF   
+#  Status=00 Mask=B Request=0 Command=00 Temp=00
+#  Start DMA Test 1 Addr++, 5 bytes, address 10000-10004, AutoInit
+#  DACK2 Asserted
+#    IO DMA Write channel 2 H
+#    CPU has access to the bus
+#  DACK2 Asserted
+#    IO DMA Write channel 2 e
+#    CPU has access to the bus
+#  DACK2 Asserted
+#    IO DMA Write channel 2 l
+#    CPU has access to the bus
+#  DACK2 Asserted
+#    IO DMA Write channel 2 l
+#    CPU has access to the bus
+#  DACK2 Asserted
+#    IO DMA Write channel 2 o
+#  EOP Asserted Channel 2
+#    CPU has access to the bus
+#  ----------- 82C37 status after memory to IO transfer ---------------------- 
+#  CH0:A=0000 C=0000  CH1:A=0000 C=0000  CH2:A=0000 C=0004  CH3:A=0000 C=0000
+#  MD0:D,A++,  ,VF    MD1:D,A++,  ,VF    MD2:S,A++,AI,RD    MD3:D,A++,  ,VF   
+#  Status=04 Mask=B Request=0 Command=00 Temp=00
+# 
+#  ----------- HTL8237 status before memory to IO transfer -------------------- 
+#  CH0:A=0000 C=0000  CH1:A=0000 C=0000  CH2:A=0004 C=0004  CH3:A=0000 C=0000
+#  MD0:D,A++,  ,VF    MD1:D,A++,  ,VF    MD2:S,A--,  ,RD    MD3:D,A++,  ,VF   
+#  Status=00 Mask=B Request=0 Command=20 Temp=00 Extended Write
+#  Start DMA Test 2 Addr--, 5 bytes, address 10004-10000, Extended write
+#  DACK2 Asserted
+#    IO DMA Write channel 2 o
+#    IO DMA Write channel 2 o
+#    CPU has access to the bus
+#  DACK2 Asserted
+#    IO DMA Write channel 2 l
+#    IO DMA Write channel 2 l
+#    CPU has access to the bus
+#  DACK2 Asserted
+#    IO DMA Write channel 2 l
+#    IO DMA Write channel 2 l
+#    CPU has access to the bus
+#  DACK2 Asserted
+#    IO DMA Write channel 2 e
+#    IO DMA Write channel 2 e
+#    CPU has access to the bus
+#  DACK2 Asserted
+#    IO DMA Write channel 2 H
+#    IO DMA Write channel 2 H
+#  EOP Asserted Channel 2
+#    CPU has access to the bus
+#  ----------- 82C37 status after memory to IO transfer ---------------------- 
+#  CH0:A=0000 C=0000  CH1:A=0000 C=0000  CH2:A=FFFF C=FFFF  CH3:A=0000 C=0000
+#  MD0:D,A++,  ,VF    MD1:D,A++,  ,VF    MD2:S,A--,  ,RD    MD3:D,A++,  ,VF   
+#  Status=04 Mask=F Request=0 Command=20 Temp=00 Extended Write
+# 
+#  ----------- HTL8237 status before memory to IO transfer -------------------- 
+#  CH0:A=0000 C=0000  CH1:A=0000 C=0000  CH2:A=0004 C=0004  CH3:A=0000 C=0000
+#  MD0:D,A++,  ,VF    MD1:D,A++,  ,VF    MD2:S,A--,  ,RD    MD3:D,A++,  ,VF   
+#  Status=00 Mask=B Request=0 Command=08 Temp=00 Compressed Timing
+#  Start DMA Test 3 Addr--, 5 bytes, address 10004-10000, Compressed timing, Autoinit
+#  DACK2 Asserted
+#    IO DMA Write channel 2 o
+#    CPU has access to the bus
+#  DACK2 Asserted
+#    IO DMA Write channel 2 l
+#    CPU has access to the bus
+#  DACK2 Asserted
+#    IO DMA Write channel 2 l
+#    CPU has access to the bus
+#  DACK2 Asserted
+#    IO DMA Write channel 2 e
+#    CPU has access to the bus
+#  DACK2 Asserted
+#    IO DMA Write channel 2 H
+#  EOP Asserted Channel 2
+#    CPU has access to the bus
+#  ----------- 82C37 status after memory to IO transfer ---------------------- 
+#  CH0:A=0000 C=0000  CH1:A=0000 C=0000  CH2:A=FFFF C=FFFF  CH3:A=0000 C=0000
+#  MD0:D,A++,  ,VF    MD1:D,A++,  ,VF    MD2:S,A--,  ,RD    MD3:D,A++,  ,VF   
+#  Status=04 Mask=F Request=0 Command=08 Temp=00 Compressed Timing
+# 
+#  ----------- HTL8237 status before memory to IO transfer -------------------- 
+#  CH0:A=0000 C=0000  CH1:A=0000 C=0000  CH2:A=0004 C=0004  CH3:A=0000 C=0000
+#  MD0:D,A++,  ,VF    MD1:D,A++,  ,VF    MD2:S,A++,  ,VF    MD3:D,A++,  ,VF   
+#  Status=00 Mask=B Request=0 Command=00 Temp=00
+#  Start DMA Test 4 Addr++, 5 bytes, address 10000-10004, Verify transfer
+#  DACK2 Asserted
+#    CPU has access to the bus
+#  DACK2 Asserted
+#    CPU has access to the bus
+#  DACK2 Asserted
+#    CPU has access to the bus
+#  DACK2 Asserted
+#    CPU has access to the bus
+#  DACK2 Asserted
+#  EOP Asserted Channel 2
+#    CPU has access to the bus
+#  ----------- 82C37 status after memory to IO transfer ---------------------- 
+#  CH0:A=0000 C=0000  CH1:A=0000 C=0000  CH2:A=0009 C=FFFF  CH3:A=0000 C=0000
+#  MD0:D,A++,  ,VF    MD1:D,A++,  ,VF    MD2:S,A++,  ,VF    MD3:D,A++,  ,VF   
+#  Status=04 Mask=F Request=0 Command=00 Temp=00
+# 
+#  ======================= Single Transfer Write Test ========================== 
+# 80100 : xx xx xx xx xx xx xx xx xx xx xx xx xx xx xx xx 
+# 80110 : xx xx xx xx xx xx xx xx xx xx xx xx xx xx xx xx 
+# 80120 : xx xx xx xx xx xx xx xx xx xx xx xx xx xx xx xx 
+#  ----------- HTL8237 status before memory to IO transfer -------------------- 
+#  CH0:A=0000 C=0000  CH1:A=0000 C=0000  CH2:A=0100 C=0004  CH3:A=0000 C=0000
+#  MD0:D,A++,  ,VF    MD1:D,A++,  ,VF    MD2:S,A++,  ,WR    MD3:D,A++,  ,VF   
+#  Status=00 Mask=B Request=0 Command=00 Temp=00
+#  Start DMA Test 0 Addr++, 5 bytes, address 80100-80104
+#  DACK2 Asserted
+#    IO DMA Read channel 2 
+#    IO DMA Read channel 2 
+#    CPU has access to the bus
+#  DACK2 Asserted
+#    IO DMA Read channel 2 
+#    IO DMA Read channel 2 
+#    CPU has access to the bus
+#  DACK2 Asserted
+#    IO DMA Read channel 2 
+#    IO DMA Read channel 2 
+#    CPU has access to the bus
+#  DACK2 Asserted
+#    IO DMA Read channel 2 
+#    IO DMA Read channel 2 
+#    CPU has access to the bus
+#  DACK2 Asserted
+#    IO DMA Read channel 2 
+#    IO DMA Read channel 2 
+#  EOP Asserted Channel 2
+#    CPU has access to the bus
+#  ----------- 82C37 status after memory to IO transfer ---------------------- 
+#  CH0:A=0000 C=0000  CH1:A=0000 C=0000  CH2:A=0105 C=FFFF  CH3:A=0000 C=0000
+#  MD0:D,A++,  ,VF    MD1:D,A++,  ,VF    MD2:S,A++,  ,WR    MD3:D,A++,  ,VF   
+#  Status=04 Mask=F Request=0 Command=00 Temp=00
+# 
+# 80100 : 38 32 43 33 39 xx xx xx xx xx xx xx xx xx xx xx 
+# 80110 : xx xx xx xx xx xx xx xx xx xx xx xx xx xx xx xx 
+# 80120 : xx xx xx xx xx xx xx xx xx xx xx xx xx xx xx xx 
+#  ----------- HTL8237 status before memory to IO transfer -------------------- 
+#  CH0:A=0000 C=0000  CH1:A=0000 C=0000  CH2:A=0100 C=0004  CH3:A=0000 C=0000
+#  MD0:D,A++,  ,VF    MD1:D,A++,  ,VF    MD2:S,A++,AI,WR    MD3:D,A++,  ,VF   
+#  Status=00 Mask=B Request=0 Command=00 Temp=00
+#  Start DMA Test 1 Addr++, 5 bytes, address 80100-80104, AutoInit
+#  DACK2 Asserted
+#    IO DMA Read channel 2 
+#    IO DMA Read channel 2 
+#    CPU has access to the bus
+#  DACK2 Asserted
+#    IO DMA Read channel 2 
+#    IO DMA Read channel 2 
+#    CPU has access to the bus
+#  DACK2 Asserted
+#    IO DMA Read channel 2 
+#    IO DMA Read channel 2 
+#    CPU has access to the bus
+#  DACK2 Asserted
+#    IO DMA Read channel 2 
+#    IO DMA Read channel 2 
+#    CPU has access to the bus
+#  DACK2 Asserted
+#    IO DMA Read channel 2 
+#    IO DMA Read channel 2 
+#  EOP Asserted Channel 2
+#    CPU has access to the bus
+#  ----------- 82C37 status after memory to IO transfer ---------------------- 
+#  CH0:A=0000 C=0000  CH1:A=0000 C=0000  CH2:A=0100 C=0004  CH3:A=0000 C=0000
+#  MD0:D,A++,  ,VF    MD1:D,A++,  ,VF    MD2:S,A++,AI,WR    MD3:D,A++,  ,VF   
+#  Status=04 Mask=B Request=0 Command=00 Temp=00
+# 
+# 80100 : 38 32 43 33 39 xx xx xx xx xx xx xx xx xx xx xx 
+# 80110 : xx xx xx xx xx xx xx xx xx xx xx xx xx xx xx xx 
+# 80120 : xx xx xx xx xx xx xx xx xx xx xx xx xx xx xx xx 
+#  ----------- HTL8237 status before memory to IO transfer -------------------- 
+#  CH0:A=0000 C=0000  CH1:A=0000 C=0000  CH2:A=0110 C=0004  CH3:A=0000 C=0000
+#  MD0:D,A++,  ,VF    MD1:D,A++,  ,VF    MD2:S,A--,  ,WR    MD3:D,A++,  ,VF   
+#  Status=00 Mask=B Request=0 Command=20 Temp=00 Extended Write
+#  Start DMA Test 2 Addr--, 5 bytes, address 80110-80110, Extended write
+#  DACK2 Asserted
+#    IO DMA Read channel 2 
+#    IO DMA Read channel 2 
+#    CPU has access to the bus
+#  DACK2 Asserted
+#    IO DMA Read channel 2 
+#    IO DMA Read channel 2 
+#    CPU has access to the bus
+#  DACK2 Asserted
+#    IO DMA Read channel 2 
+#    IO DMA Read channel 2 
+#    CPU has access to the bus
+#  DACK2 Asserted
+#    IO DMA Read channel 2 
+#    IO DMA Read channel 2 
+#    CPU has access to the bus
+#  DACK2 Asserted
+#    IO DMA Read channel 2 
+#    IO DMA Read channel 2 
+#  EOP Asserted Channel 2
+#    CPU has access to the bus
+#  ----------- 82C37 status after memory to IO transfer ---------------------- 
+#  CH0:A=0000 C=0000  CH1:A=0000 C=0000  CH2:A=010B C=FFFF  CH3:A=0000 C=0000
+#  MD0:D,A++,  ,VF    MD1:D,A++,  ,VF    MD2:S,A--,  ,WR    MD3:D,A++,  ,VF   
+#  Status=04 Mask=F Request=0 Command=20 Temp=00 Extended Write
+# 
+# 80100 : 38 32 43 33 39 xx xx xx xx xx xx xx 39 33 43 32 
+# 80110 : 38 xx xx xx xx xx xx xx xx xx xx xx xx xx xx xx 
+# 80120 : xx xx xx xx xx xx xx xx xx xx xx xx xx xx xx xx 
+#  ----------- HTL8237 status before memory to IO transfer -------------------- 
+#  CH0:A=0000 C=0000  CH1:A=0000 C=0000  CH2:A=0120 C=0004  CH3:A=0000 C=0000
+#  MD0:D,A++,  ,VF    MD1:D,A++,  ,VF    MD2:S,A--,  ,WR    MD3:D,A++,  ,VF   
+#  Status=00 Mask=B Request=0 Command=08 Temp=00 Compressed Timing
+#  Start DMA Test 3 Addr--, 5 bytes, address 80120-80120, Compressed timing, Autoinit
+#  DACK2 Asserted
+#    IO DMA Read channel 2 
+#    CPU has access to the bus
+#  DACK2 Asserted
+#    IO DMA Read channel 2 
+#    CPU has access to the bus
+#  DACK2 Asserted
+#    IO DMA Read channel 2 
+#    CPU has access to the bus
+#  DACK2 Asserted
+#    IO DMA Read channel 2 
+#    CPU has access to the bus
+#  DACK2 Asserted
+#    IO DMA Read channel 2 
+#  EOP Asserted Channel 2
+#    CPU has access to the bus
+#  ----------- 82C37 status after memory to IO transfer ---------------------- 
+#  CH0:A=0000 C=0000  CH1:A=0000 C=0000  CH2:A=011B C=FFFF  CH3:A=0000 C=0000
+#  MD0:D,A++,  ,VF    MD1:D,A++,  ,VF    MD2:S,A--,  ,WR    MD3:D,A++,  ,VF   
+#  Status=04 Mask=F Request=0 Command=08 Temp=00 Compressed Timing
+# 
+# 80100 : 38 32 43 33 39 xx xx xx xx xx xx xx 39 33 43 32 
+# 80110 : 38 xx xx xx xx xx xx xx xx xx xx xx 39 33 43 32 
+# 80120 : 38 xx xx xx xx xx xx xx xx xx xx xx xx xx xx xx 
+#  ======================= Block Read Transfer Test ============================ 
+#  ----------- HTL8237 status before memory to IO transfer -------------------- 
+#  CH0:A=0000 C=0000  CH1:A=0000 C=0000  CH2:A=0000 C=0004  CH3:A=0000 C=0000
+#  MD0:D,A++,  ,VF    MD1:D,A++,  ,VF    MD2:B,A++,  ,RD    MD3:D,A++,  ,VF   
+#  Status=00 Mask=B Request=0 Command=00 Temp=00
+#  Start DMA Test 0 Addr++, 5 bytes, address 10000-10004
+#  DACK2 Asserted
+#    IO DMA Write channel 2 H
+#    IO DMA Write channel 2 e
+#    IO DMA Write channel 2 l
+#    IO DMA Write channel 2 l
+#    IO DMA Write channel 2 o
+#  EOP Asserted Channel 2
+#    CPU has access to the bus
+#  ----------- 82C37 status after memory to IO transfer ---------------------- 
+#  CH0:A=0000 C=0000  CH1:A=0000 C=0000  CH2:A=0005 C=FFFF  CH3:A=0000 C=0000
+#  MD0:D,A++,  ,VF    MD1:D,A++,  ,VF    MD2:B,A++,  ,RD    MD3:D,A++,  ,VF   
+#  Status=04 Mask=F Request=0 Command=00 Temp=00
+# 
+#  ----------- HTL8237 status before memory to IO transfer -------------------- 
+#  CH0:A=0000 C=0000  CH1:A=0000 C=0000  CH2:A=0000 C=0004  CH3:A=0000 C=0000
+#  MD0:D,A++,  ,VF    MD1:D,A++,  ,VF    MD2:B,A++,AI,RD    MD3:D,A++,  ,VF   
+#  Status=00 Mask=B Request=0 Command=00 Temp=00
+#  Start DMA Test 1 Addr++, 5 bytes, address 10000-10004, AutoInit
+#  DACK2 Asserted
+#    IO DMA Write channel 2 H
+#    IO DMA Write channel 2 e
+#    IO DMA Write channel 2 l
+#    IO DMA Write channel 2 l
+#    IO DMA Write channel 2 o
+#  EOP Asserted Channel 2
+#    CPU has access to the bus
+#  ----------- 82C37 status after memory to IO transfer ---------------------- 
+#  CH0:A=0000 C=0000  CH1:A=0000 C=0000  CH2:A=0000 C=0004  CH3:A=0000 C=0000
+#  MD0:D,A++,  ,VF    MD1:D,A++,  ,VF    MD2:B,A++,AI,RD    MD3:D,A++,  ,VF   
+#  Status=04 Mask=B Request=0 Command=00 Temp=00
+# 
+#  ----------- HTL8237 status before memory to IO transfer -------------------- 
+#  CH0:A=0000 C=0000  CH1:A=0000 C=0000  CH2:A=0004 C=0004  CH3:A=0000 C=0000
+#  MD0:D,A++,  ,VF    MD1:D,A++,  ,VF    MD2:B,A--,  ,RD    MD3:D,A++,  ,VF   
+#  Status=00 Mask=B Request=0 Command=20 Temp=00 Extended Write
+#  Start DMA Test 2 Addr--, 5 bytes, address 10004-10000, Extended write
+#  DACK2 Asserted
+#    IO DMA Write channel 2 o
+#    IO DMA Write channel 2 o
+#    IO DMA Write channel 2 l
+#    IO DMA Write channel 2 l
+#    IO DMA Write channel 2 l
+#    IO DMA Write channel 2 l
+#    IO DMA Write channel 2 e
+#    IO DMA Write channel 2 e
+#    IO DMA Write channel 2 H
+#    IO DMA Write channel 2 H
+#  EOP Asserted Channel 2
+#    CPU has access to the bus
+#  ----------- 82C37 status after memory to IO transfer ---------------------- 
+#  CH0:A=0000 C=0000  CH1:A=0000 C=0000  CH2:A=FFFF C=FFFF  CH3:A=0000 C=0000
+#  MD0:D,A++,  ,VF    MD1:D,A++,  ,VF    MD2:B,A--,  ,RD    MD3:D,A++,  ,VF   
+#  Status=04 Mask=F Request=0 Command=20 Temp=00 Extended Write
+# 
+#  ----------- HTL8237 status before memory to IO transfer -------------------- 
+#  CH0:A=0000 C=0000  CH1:A=0000 C=0000  CH2:A=0004 C=0004  CH3:A=0000 C=0000
+#  MD0:D,A++,  ,VF    MD1:D,A++,  ,VF    MD2:B,A--,AI,RD    MD3:D,A++,  ,VF   
+#  Status=00 Mask=B Request=0 Command=08 Temp=00 Compressed Timing
+#  Start DMA Test 3 Addr--, 5 bytes, address 10004-10000, Compressed timing, Autoinit
+#  DACK2 Asserted
+#    IO DMA Write channel 2 o
+#    IO DMA Write channel 2 l
+#    IO DMA Write channel 2 l
+#    IO DMA Write channel 2 e
+#    IO DMA Write channel 2 H
+#  EOP Asserted Channel 2
+#    CPU has access to the bus
+#  ----------- 82C37 status after memory to IO transfer ---------------------- 
+#  CH0:A=0000 C=0000  CH1:A=0000 C=0000  CH2:A=0004 C=0004  CH3:A=0000 C=0000
+#  MD0:D,A++,  ,VF    MD1:D,A++,  ,VF    MD2:B,A--,AI,RD    MD3:D,A++,  ,VF   
+#  Status=04 Mask=B Request=0 Command=08 Temp=00 Compressed Timing
+# 
+#  ======================= Demand Transfer Test ================================ 
+#  ----------- HTL8237 status before memory to IO transfer -------------------- 
+#  CH0:A=0000 C=0000  CH1:A=0000 C=0000  CH2:A=0000 C=0004  CH3:A=0000 C=0000
+#  MD0:D,A++,  ,VF    MD1:D,A++,  ,VF    MD2:D,A++,  ,RD    MD3:D,A++,  ,VF   
+#  Status=00 Mask=B Request=0 Command=00 Temp=00
+#  Start DMA Test 0 Addr++, 5 bytes, address 10000-10004
+#  DACK2 Asserted
+#    IO DMA Write channel 2 H
+#    IO DMA Write channel 2 e
+#    IO DMA Write channel 2 l
+#    CPU has access to the bus
+#  ----------- 82C37 status during memory to IO transfer -------------------- 
+#  CH0:A=0000 C=0000  CH1:A=0000 C=0000  CH2:A=0003 C=0001  CH3:A=0000 C=0000
+#  MD0:D,A++,  ,VF    MD1:D,A++,  ,VF    MD2:D,A++,  ,RD    MD3:D,A++,  ,VF   
+#  Status=40 Mask=B Request=0 Command=00 Temp=00
+#  DACK2 Asserted
+#    IO DMA Write channel 2 l
+#    IO DMA Write channel 2 o
+#  EOP Asserted Channel 2
+#    CPU has access to the bus
+#  ----------- 82C37 status after memory to IO transfer ---------------------- 
+#  CH0:A=0000 C=0000  CH1:A=0000 C=0000  CH2:A=0005 C=FFFF  CH3:A=0000 C=0000
+#  MD0:D,A++,  ,VF    MD1:D,A++,  ,VF    MD2:D,A++,  ,RD    MD3:D,A++,  ,VF   
+#  Status=04 Mask=F Request=0 Command=00 Temp=00
+# 
+#  ----------- HTL8237 status before memory to IO transfer -------------------- 
+#  CH0:A=0000 C=0000  CH1:A=0000 C=0000  CH2:A=0000 C=0004  CH3:A=0000 C=0000
+#  MD0:D,A++,  ,VF    MD1:D,A++,  ,VF    MD2:D,A++,AI,RD    MD3:D,A++,  ,VF   
+#  Status=00 Mask=B Request=0 Command=00 Temp=00
+#  Start DMA Test 1 Addr++, 5 bytes, address 10000-10004, AutoInit
+#  DACK2 Asserted
+#    IO DMA Write channel 2 H
+#    IO DMA Write channel 2 e
+#    IO DMA Write channel 2 l
+#    CPU has access to the bus
+#  ----------- 82C37 status during memory to IO transfer -------------------- 
+#  CH0:A=0000 C=0000  CH1:A=0000 C=0000  CH2:A=0003 C=0001  CH3:A=0000 C=0000
+#  MD0:D,A++,  ,VF    MD1:D,A++,  ,VF    MD2:D,A++,AI,RD    MD3:D,A++,  ,VF   
+#  Status=40 Mask=B Request=0 Command=00 Temp=00
+#  DACK2 Asserted
+#    IO DMA Write channel 2 l
+#    IO DMA Write channel 2 o
+#  EOP Asserted Channel 2
+#    CPU has access to the bus
+#  ----------- 82C37 status after memory to IO transfer ---------------------- 
+#  CH0:A=0000 C=0000  CH1:A=0000 C=0000  CH2:A=0000 C=0004  CH3:A=0000 C=0000
+#  MD0:D,A++,  ,VF    MD1:D,A++,  ,VF    MD2:D,A++,AI,RD    MD3:D,A++,  ,VF   
+#  Status=04 Mask=B Request=0 Command=00 Temp=00
+# 
+#  ----------- HTL8237 status before memory to IO transfer -------------------- 
+#  CH0:A=0000 C=0000  CH1:A=0000 C=0000  CH2:A=0004 C=0004  CH3:A=0000 C=0000
+#  MD0:D,A++,  ,VF    MD1:D,A++,  ,VF    MD2:D,A--,  ,RD    MD3:D,A++,  ,VF   
+#  Status=00 Mask=B Request=0 Command=20 Temp=00 Extended Write
+#  Start DMA Test 2 Addr--, 5 bytes, address 10004-10000, Extended write
+#  DACK2 Asserted
+#    IO DMA Write channel 2 o
+#    IO DMA Write channel 2 o
+#    IO DMA Write channel 2 l
+#    IO DMA Write channel 2 l
+#    IO DMA Write channel 2 l
+#    IO DMA Write channel 2 l
+#    CPU has access to the bus
+#  ----------- 82C37 status during memory to IO transfer -------------------- 
+#  CH0:A=0000 C=0000  CH1:A=0000 C=0000  CH2:A=0001 C=0001  CH3:A=0000 C=0000
+#  MD0:D,A++,  ,VF    MD1:D,A++,  ,VF    MD2:D,A--,  ,RD    MD3:D,A++,  ,VF   
+#  Status=40 Mask=B Request=0 Command=20 Temp=00 Extended Write
+#  DACK2 Asserted
+#    IO DMA Write channel 2 e
+#    IO DMA Write channel 2 e
+#    IO DMA Write channel 2 H
+#    IO DMA Write channel 2 H
+#  EOP Asserted Channel 2
+#    CPU has access to the bus
+#  ----------- 82C37 status after memory to IO transfer ---------------------- 
+#  CH0:A=0000 C=0000  CH1:A=0000 C=0000  CH2:A=FFFF C=FFFF  CH3:A=0000 C=0000
+#  MD0:D,A++,  ,VF    MD1:D,A++,  ,VF    MD2:D,A--,  ,RD    MD3:D,A++,  ,VF   
+#  Status=04 Mask=F Request=0 Command=20 Temp=00 Extended Write
+# 
+#  ----------- HTL8237 status before memory to IO transfer -------------------- 
+#  CH0:A=0000 C=0000  CH1:A=0000 C=0000  CH2:A=0004 C=0004  CH3:A=0000 C=0000
+#  MD0:D,A++,  ,VF    MD1:D,A++,  ,VF    MD2:D,A--,AI,RD    MD3:D,A++,  ,VF   
+#  Status=00 Mask=B Request=0 Command=08 Temp=00 Compressed Timing
+#  Start DMA Test 3 Addr--, 5 bytes, address 10004-10000, Compressed timing, Autoinit
+#  DACK2 Asserted
+#    IO DMA Write channel 2 o
+#    IO DMA Write channel 2 l
+#    IO DMA Write channel 2 l
+#    CPU has access to the bus
+#  ----------- 82C37 status during memory to IO transfer -------------------- 
+#  CH0:A=0000 C=0000  CH1:A=0000 C=0000  CH2:A=0001 C=0001  CH3:A=0000 C=0000
+#  MD0:D,A++,  ,VF    MD1:D,A++,  ,VF    MD2:D,A--,AI,RD    MD3:D,A++,  ,VF   
+#  Status=40 Mask=B Request=0 Command=08 Temp=00 Compressed Timing
+#  DACK2 Asserted
+#    IO DMA Write channel 2 e
+#    IO DMA Write channel 2 H
+#  EOP Asserted Channel 2
+#    CPU has access to the bus
+#  ----------- 82C37 status after memory to IO transfer ---------------------- 
+#  CH0:A=0000 C=0000  CH1:A=0000 C=0000  CH2:A=0004 C=0004  CH3:A=0000 C=0000
+#  MD0:D,A++,  ,VF    MD1:D,A++,  ,VF    MD2:D,A--,AI,RD    MD3:D,A++,  ,VF   
+#  Status=04 Mask=B Request=0 Command=08 Temp=00 Compressed Timing
+# 
+#  ======================= Priority Test =============================== 
+#  ----------- 82C37 status before Priority test -------------------------- 
+#  CH0:A=0002 C=0004  CH1:A=0004 C=0004  CH2:A=0008 C=0004  CH3:A=000A C=0004
+#  MD0:S,A++,  ,RD    MD1:S,A++,  ,RD    MD2:S,A++,  ,RD    MD3:S,A++,  ,RD   
+#  Status=00 Mask=0 Request=0 Command=00 Temp=00
+#  Start Fixed Priority DMA Test 0 Addr++, 5 bytes, address 10000-10004
+#  DACK0 Asserted
+#  DACK0 Asserted
+#  DACK0 Asserted
+#  DACK0 Asserted
+#  DACK0 Asserted
+#  EOP Asserted Channel 0
+#  DACK1 Asserted
+#  DACK1 Asserted
+#  DACK1 Asserted
+#  DACK1 Asserted
+#  DACK1 Asserted
+#  EOP Asserted Channel 1
+#  DACK2 Asserted
+#  DACK2 Asserted
+#  DACK2 Asserted
+#  DACK2 Asserted
+#  DACK2 Asserted
+#  EOP Asserted Channel 2
+#  DACK3 Asserted
+#  DACK3 Asserted
+#  DACK3 Asserted
+#  DACK3 Asserted
+#  DACK3 Asserted
+#  EOP Asserted Channel 3
+#  ----------- 82C37 status after Priority test ----------------------------- 
+#  CH0:A=0007 C=FFFF  CH1:A=0009 C=FFFF  CH2:A=000D C=FFFF  CH3:A=000F C=FFFF
+#  MD0:S,A++,  ,RD    MD1:S,A++,  ,RD    MD2:S,A++,  ,RD    MD3:S,A++,  ,RD   
+#  Status=0F Mask=F Request=0 Command=00 Temp=00
+# 
+#  ----------- 82C37 status before Priority test -------------------------- 
+#  CH0:A=0002 C=0004  CH1:A=0004 C=0004  CH2:A=0008 C=0004  CH3:A=000A C=0004
+#  MD0:S,A++,  ,RD    MD1:S,A++,  ,RD    MD2:S,A++,  ,RD    MD3:S,A++,  ,RD   
+#  Status=00 Mask=0 Request=0 Command=10 Temp=00 Rotate Priority
+#  Start Rotate Priority DMA Test 1 Addr--, 5 bytes, address 10000-10004
+#  DACK0 Asserted
+#  DACK1 Asserted
+#  DACK2 Asserted
+#  DACK3 Asserted
+#  DACK0 Asserted
+#  DACK1 Asserted
+#  DACK2 Asserted
+#  DACK3 Asserted
+#  DACK0 Asserted
+#  DACK1 Asserted
+#  DACK2 Asserted
+#  DACK3 Asserted
+#  DACK0 Asserted
+#  DACK1 Asserted
+#  DACK2 Asserted
+#  DACK3 Asserted
+#  DACK0 Asserted
+#  EOP Asserted Channel 0
+#  DACK1 Asserted
+#  EOP Asserted Channel 1
+#  DACK2 Asserted
+#  EOP Asserted Channel 2
+#  DACK3 Asserted
+#  EOP Asserted Channel 3
+#  ----------- 82C37 status after Priority test ----------------------------- 
+#  CH0:A=0007 C=FFFF  CH1:A=0009 C=FFFF  CH2:A=000D C=FFFF  CH3:A=000F C=FFFF
+#  MD0:S,A++,  ,RD    MD1:S,A++,  ,RD    MD2:S,A++,  ,RD    MD3:S,A++,  ,RD   
+#  Status=0F Mask=F Request=0 Command=10 Temp=00 Rotate Priority
+# 
+#  ======================== Memory to Memory Test ============================ 
+# 10000 : 48 65 6C 6C 6F 20 57 6F 72 6C 64 00 00 00 00 00 
+# 10010 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+# 10020 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+#  Test 0 Address 10001 to 80000, Normal Write, CH0++, CH1++
+#  EOP Memory to Memory Transfer
+#  ----------- 82C37 status after Memory transfer ---------------------------- 
+#  CH0:A=0006 C=FFFB  CH1:A=0005 C=FFFF  CH2:A=000D C=FFFF  CH3:A=000F C=FFFF
+#  MD0:B,A++,  ,RD    MD1:B,A++,  ,WR    MD2:S,A++,  ,RD    MD3:S,A++,  ,RD   
+#  Status=02 Mask=E Request=0 Command=01 Temp=20 MEM2MEM
+# 80000 : 65 6C 6C 6F 20 xx xx xx xx xx xx xx xx xx xx xx 
+# 80010 : xx xx xx xx xx xx xx xx xx xx xx xx xx xx xx xx 
+# 80020 : xx xx xx xx xx xx xx xx xx xx xx xx xx xx xx xx 
+# 
+#  Test 1 Address 10007 to 8001E, AutoInit, CH0--, CH1--
+#  EOP Memory to Memory Transfer
+#  ----------- 82C37 status after Memory transfer ---------------------------- 
+#  CH0:A=0002 C=FFFB  CH1:A=001E C=0004  CH2:A=000D C=FFFF  CH3:A=000F C=FFFF
+#  MD0:B,A--,AI,RD    MD1:B,A--,AI,WR    MD2:S,A++,  ,RD    MD3:S,A++,  ,RD   
+#  Status=02 Mask=C Request=0 Command=01 Temp=6C MEM2MEM
+# 80000 : 65 6C 6C 6F 20 xx xx xx xx xx xx xx xx xx xx xx 
+# 80010 : xx xx xx xx xx xx xx xx xx xx 6C 6F 20 57 6F xx 
+# 80020 : xx xx xx xx xx xx xx xx xx xx xx xx xx xx xx xx 
+# 
+#  Test 2 Address 1000A to 80007, Extended write, CH0--, CH1++
+#  EOP Memory to Memory Transfer
+#  ----------- 82C37 status after Memory transfer ---------------------------- 
+#  CH0:A=0005 C=FFFB  CH1:A=000C C=FFFF  CH2:A=000D C=FFFF  CH3:A=000F C=FFFF
+#  MD0:B,A--,  ,RD    MD1:B,A++,  ,WR    MD2:S,A++,  ,RD    MD3:S,A++,  ,RD   
+#  Status=02 Mask=E Request=0 Command=21 Temp=57 MEM2MEM Extended Write
+# 80000 : 65 6C 6C 6F 20 xx xx 64 6C 72 6F 57 xx xx xx xx 
+# 80010 : xx xx xx xx xx xx xx xx xx xx 6C 6F 20 57 6F xx 
+# 80020 : xx xx xx xx xx xx xx xx xx xx xx xx xx xx xx xx 
+# 
+#  Test 3 Address 10005 to 80000, Hold CH0, CH1++, fill with 20
+#  EOP Memory to Memory Transfer
+#  ----------- 82C37 status after Memory transfer ---------------------------- 
+#  CH0:A=0005 C=FFFB  CH1:A=0005 C=FFFF  CH2:A=000D C=FFFF  CH3:A=000F C=FFFF
+#  MD0:B,A--,  ,RD    MD1:B,A++,  ,WR    MD2:S,A++,  ,RD    MD3:S,A++,  ,RD   
+#  Status=02 Mask=E Request=0 Command=03 Temp=20 MEM2MEM CH0Hold
+# 80000 : 20 20 20 20 20 xx xx 64 6C 72 6F 57 xx xx xx xx 
+# 80010 : xx xx xx xx xx xx xx xx xx xx 6C 6F 20 57 6F xx 
+# 80020 : xx xx xx xx xx xx xx xx xx xx xx xx xx xx xx xx 
+# 
+#  Test 4 Address 10000 to 8001F, Hold CH0, CH1--, fill with 48
+#  EOP Memory to Memory Transfer
+#  ----------- 82C37 status after Memory transfer ---------------------------- 
+#  CH0:A=0000 C=FFFB  CH1:A=001A C=FFFF  CH2:A=000D C=FFFF  CH3:A=000F C=FFFF
+#  MD0:B,A++,  ,RD    MD1:B,A--,  ,WR    MD2:S,A++,  ,RD    MD3:S,A++,  ,RD   
+#  Status=02 Mask=E Request=0 Command=03 Temp=48 MEM2MEM CH0Hold
+# 80000 : 20 20 20 20 20 xx xx 64 6C 72 6F 57 xx xx xx xx 
+# 80010 : xx xx xx xx xx xx xx xx xx xx 6C 48 48 48 48 48 
+# 80020 : xx xx xx xx xx xx xx xx xx xx xx xx xx xx xx xx 
+# 
+#  ======================= READY input Test ============================ 
+#  Start DMA Test 0 Addr++, 2 bytes, address 10000-10004, assert READY for memory read
+#  DACK2 Asserted
+#    IO DMA Write channel 2 H
+#    IO DMA Write channel 2 H
+#    IO DMA Write channel 2 H
+#    IO DMA Write channel 2 e
+#    IO DMA Write channel 2 e
+#  EOP Asserted Channel 2
+#    CPU has access to the bus
+# 
+#  Start DMA Test 1 Addr++, 2 bytes, address 10000-10004, assert READY for memory write
+#  DACK2 Asserted
+#    IO DMA Read channel 2 
+#    IO DMA Read channel 2 
+#    IO DMA Read channel 2 
+#    IO DMA Read channel 2 
+#    IO DMA Read channel 2 
+#    IO DMA Read channel 2 
+#    IO DMA Read channel 2 
+#  EOP Asserted Channel 2
+#    CPU has access to the bus
+# 
+#  Start DMA Test 2 Addr++, 2 bytes, address 10000-10004, Extended Write, assert READY for memory write
+#  DACK2 Asserted
+#    IO DMA Read channel 2 
+#    IO DMA Read channel 2 
+#    IO DMA Read channel 2 
+#    IO DMA Read channel 2 
+#    IO DMA Read channel 2 
+#    IO DMA Read channel 2 
+#    IO DMA Read channel 2 
+#  EOP Asserted Channel 2
+#    CPU has access to the bus
+# 
+#  Start DMA Test 3 Addr++, 2 bytes, address 10000-10004, assert READY for IO write
+#  DACK2 Asserted
+#    IO DMA Write channel 2 8
+#    IO DMA Write channel 2 2
+#  EOP Asserted Channel 2
+#    CPU has access to the bus
+# 
+#  Start DMA Test 4 Addr++, 2 bytes, address 10000-10004, assert READY for IO read
+#  DACK2 Asserted
+#    IO DMA Read channel 2 
+#    IO DMA Read channel 2 
+#    IO DMA Read channel 2 
+#    IO DMA Read channel 2 
+#    IO DMA Read channel 2 
+#    IO DMA Read channel 2 
+#    IO DMA Read channel 2 
+#  EOP Asserted Channel 2
+#    CPU has access to the bus
+# 
+#  ======================= EOP input Test ================================ 
+#  ----------- HTL8237 status before memory to IO transfer -------------------- 
+#  CH0:A=0000 C=FFFB  CH1:A=001A C=FFFF  CH2:A=0000 C=000A  CH3:A=000F C=FFFF
+#  MD0:B,A++,  ,RD    MD1:B,A--,  ,WR    MD2:B,A++,  ,RD    MD3:S,A++,  ,RD   
+#  Status=04 Mask=B Request=0 Command=00 Temp=48
+#  Start DMA Test 0 Addr++, 11 bytes, address 10000-10040, Issue EOP after byte 2, READ
+#  DACK2 Asserted
+#    IO DMA Write channel 2 C
+#    IO DMA Write channel 2 3
+#  EOP Asserted Channel 2
+#    IO DMA Write channel 2 l
+#    CPU has access to the bus
+#  ----------- 82C37 status after memory to IO transfer ---------------------- 
+#  CH0:A=0000 C=FFFB  CH1:A=001A C=FFFF  CH2:A=0003 C=0007  CH3:A=000F C=FFFF
+#  MD0:B,A++,  ,RD    MD1:B,A--,  ,WR    MD2:B,A++,  ,RD    MD3:S,A++,  ,RD   
+#  Status=04 Mask=F Request=0 Command=00 Temp=48
+# 
+#  ----------- HTL8237 status before memory to IO transfer -------------------- 
+#  CH0:A=0000 C=FFFB  CH1:A=001A C=FFFF  CH2:A=0000 C=000A  CH3:A=000F C=FFFF
+#  MD0:B,A++,  ,RD    MD1:B,A--,  ,WR    MD2:B,A++,AI,RD    MD3:S,A++,  ,RD   
+#  Status=00 Mask=B Request=0 Command=00 Temp=48
+#  Start DMA Test 1 Addr++, 11 bytes, address 10000-10040, Issue EOP after byte 2, autoinit, READ
+#  DACK2 Asserted
+#    IO DMA Write channel 2 C
+#    IO DMA Write channel 2 3
+#  EOP Asserted Channel 2
+#    IO DMA Write channel 2 l
+#    CPU has access to the bus
+#  ----------- 82C37 status after memory to IO transfer ---------------------- 
+#  CH0:A=0000 C=FFFB  CH1:A=001A C=FFFF  CH2:A=0000 C=000A  CH3:A=000F C=FFFF
+#  MD0:B,A++,  ,RD    MD1:B,A--,  ,WR    MD2:B,A++,AI,RD    MD3:S,A++,  ,RD   
+#  Status=04 Mask=B Request=0 Command=00 Temp=48
+# 
+#  ----------- HTL8237 status before memory to IO transfer -------------------- 
+#  CH0:A=0000 C=FFFB  CH1:A=001A C=FFFF  CH2:A=0000 C=000A  CH3:A=000F C=FFFF
+#  MD0:B,A++,  ,RD    MD1:B,A--,  ,WR    MD2:B,A++,  ,RD    MD3:S,A++,  ,RD   
+#  Status=00 Mask=B Request=0 Command=00 Temp=48
+#  Start DMA Test 2 Addr++, 11 bytes, address 10000-10040, Issue Spurious EOP to Master after byte 2, READ
+#  DACK2 Asserted
+#    IO DMA Write channel 2 C
+#    IO DMA Write channel 2 3
+#    IO DMA Write channel 2 l
+#    IO DMA Write channel 2 l
+#    IO DMA Write channel 2 o
+#    IO DMA Write channel 2  
+#    IO DMA Write channel 2 W
+#    IO DMA Write channel 2 o
+#    IO DMA Write channel 2 r
+#    IO DMA Write channel 2 l
+#    IO DMA Write channel 2 d
+#  EOP Asserted Channel 2
+#    CPU has access to the bus
+#  ----------- 82C37 status after memory to IO transfer ---------------------- 
+#  CH0:A=0000 C=FFFB  CH1:A=001A C=FFFF  CH2:A=000B C=FFFF  CH3:A=000F C=FFFF
+#  MD0:B,A++,  ,RD    MD1:B,A--,  ,WR    MD2:B,A++,  ,RD    MD3:S,A++,  ,RD   
+#  Status=04 Mask=F Request=0 Command=00 Temp=48
+# 
+#  ======================== EOP Memory to Memory Test ======================== 
+# 10000 : 43 33 6C 6C 6F 20 57 6F 72 6C 64 00 00 00 00 00 
+# 10010 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+# 10020 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+#  ----------- HTL8237 status before Memory to Memory transfer ----------------- 
+#  CH0:A=0001 C=0000  CH1:A=0000 C=0004  CH2:A=000B C=FFFF  CH3:A=000F C=FFFF
+#  MD0:B,A++,  ,RD    MD1:B,A++,  ,WR    MD2:B,A++,  ,RD    MD3:S,A++,  ,RD   
+#  Status=00 Mask=E Request=0 Command=01 Temp=48 MEM2MEM
+#  Test 0 Address 10001 to 80000, Normal Write, CH0++, CH1++
+# External EOP asserted!
+#  EOP Memory to Memory Transfer
+#  ----------- 82C37 status after Memory to Memory transfer ---------------------- 
+#  CH0:A=0003 C=FFFE  CH1:A=0002 C=0002  CH2:A=000B C=FFFF  CH3:A=000F C=FFFF
+#  MD0:B,A++,  ,RD    MD1:B,A++,  ,WR    MD2:B,A++,  ,RD    MD3:S,A++,  ,RD   
+#  Status=02 Mask=E Request=0 Command=01 Temp=6C MEM2MEM
+# 80000 : 33 6C 20 20 20 xx xx 64 6C 72 6F 57 xx xx xx xx 
+# 80010 : xx xx xx xx xx xx xx xx xx xx 6C 48 48 48 48 48 
+# 80020 : xx xx xx xx xx xx xx xx xx xx xx xx xx xx xx xx 
+# 
+#  ----------- HTL8237 status before Memory to Memory transfer ----------------- 
+#  CH0:A=0007 C=0000  CH1:A=001E C=0004  CH2:A=000B C=FFFF  CH3:A=000F C=FFFF
+#  MD0:B,A--,AI,RD    MD1:B,A--,AI,WR    MD2:B,A++,  ,RD    MD3:S,A++,  ,RD   
+#  Status=00 Mask=E Request=0 Command=01 Temp=6C MEM2MEM
+#  Test 1 Address 10007 to 8001E, AutoInit, CH0--, CH1--
+# External EOP asserted!
+#  EOP Memory to Memory Transfer
+#  ----------- 82C37 status after Memory to Memory transfer ---------------------- 
+#  CH0:A=0005 C=FFFE  CH1:A=001E C=0004  CH2:A=000B C=FFFF  CH3:A=000F C=FFFF
+#  MD0:B,A--,AI,RD    MD1:B,A--,AI,WR    MD2:B,A++,  ,RD    MD3:S,A++,  ,RD   
+#  Status=02 Mask=C Request=0 Command=01 Temp=57 MEM2MEM
+# 80000 : 33 6C 20 20 20 xx xx 64 6C 72 6F 57 xx xx xx xx 
+# 80010 : xx xx xx xx xx xx xx xx xx xx 6C 48 48 57 6F 48 
+# 80020 : xx xx xx xx xx xx xx xx xx xx xx xx xx xx xx xx 
+# 
+#  ----------- HTL8237 status before Memory to Memory transfer ----------------- 
+#  CH0:A=000A C=0000  CH1:A=0007 C=0004  CH2:A=000B C=FFFF  CH3:A=000F C=FFFF
+#  MD0:B,A--,  ,RD    MD1:B,A++,  ,WR    MD2:B,A++,  ,RD    MD3:S,A++,  ,RD   
+#  Status=00 Mask=E Request=0 Command=21 Temp=57 MEM2MEM Extended Write
+#  Test 2 Address 1000A to 80007, Extended write, CH0--, CH1++
+# External EOP asserted!
+#  EOP Memory to Memory Transfer
+#  ----------- 82C37 status after Memory to Memory transfer ---------------------- 
+#  CH0:A=0008 C=FFFE  CH1:A=0009 C=0002  CH2:A=000B C=FFFF  CH3:A=000F C=FFFF
+#  MD0:B,A--,  ,RD    MD1:B,A++,  ,WR    MD2:B,A++,  ,RD    MD3:S,A++,  ,RD   
+#  Status=02 Mask=E Request=0 Command=21 Temp=6C MEM2MEM Extended Write
+# 80000 : 33 6C 20 20 20 xx xx 64 6C 72 6F 57 xx xx xx xx 
+# 80010 : xx xx xx xx xx xx xx xx xx xx 6C 48 48 57 6F 48 
+# 80020 : xx xx xx xx xx xx xx xx xx xx xx xx xx xx xx xx 
+# 
+# ** Warning: Compressed Timing is not allowed for memory_2_memory transfers
+#    Time: 871450 ns  Iteration: 2  Instance: /htl8237_tb/DUT/TOP37
+# ** Warning: Compressed Timing is not allowed for memory_2_memory transfers
+#    Time: 871500 ns  Iteration: 2  Instance: /htl8237_tb/DUT/TOP37
+#  ----------- HTL8237 status before Memory to Memory transfer ----------------- 
+#  CH0:A=0003 C=0000  CH1:A=002F C=0004  CH2:A=000B C=FFFF  CH3:A=000F C=FFFF
+#  MD0:B,A++,  ,RD    MD1:B,A--,  ,WR    MD2:B,A++,  ,RD    MD3:S,A++,  ,RD   
+#  Status=00 Mask=E Request=0 Command=01 Temp=6C MEM2MEM
+#  Test 3 Address 10003 to 8002F, Compressed,Autoinit CH1++, CH1--
+# External EOP asserted!
+#  EOP Memory to Memory Transfer
+#  ----------- 82C37 status after Memory to Memory transfer ---------------------- 
+#  CH0:A=0005 C=FFFE  CH1:A=002D C=0002  CH2:A=000B C=FFFF  CH3:A=000F C=FFFF
+#  MD0:B,A++,  ,RD    MD1:B,A--,  ,WR    MD2:B,A++,  ,RD    MD3:S,A++,  ,RD   
+#  Status=02 Mask=E Request=0 Command=01 Temp=6F MEM2MEM
+# 80000 : 33 6C 20 20 20 xx xx 64 6C 72 6F 57 xx xx xx xx 
+# 80010 : xx xx xx xx xx xx xx xx xx xx 6C 48 48 57 6F 48 
+# 80020 : xx xx xx xx xx xx xx xx xx xx xx xx xx xx 6F 6C 
+# 
+#  ----------- HTL8237 status before Memory to Memory transfer ----------------- 
+#  CH0:A=0005 C=0000  CH1:A=0000 C=0004  CH2:A=000B C=FFFF  CH3:A=000F C=FFFF
+#  MD0:B,A--,  ,RD    MD1:B,A++,  ,WR    MD2:B,A++,  ,RD    MD3:S,A++,  ,RD   
+#  Status=00 Mask=E Request=0 Command=03 Temp=6F MEM2MEM CH0Hold
+#  Test 4 Address 10005 to 80000, Hold CH0, CH1++, fill with 20
+# External EOP asserted!
+#  EOP Memory to Memory Transfer
+#  ----------- 82C37 status after Memory to Memory transfer ---------------------- 
+#  CH0:A=0005 C=FFFE  CH1:A=0002 C=0002  CH2:A=000B C=FFFF  CH3:A=000F C=FFFF
+#  MD0:B,A--,  ,RD    MD1:B,A++,  ,WR    MD2:B,A++,  ,RD    MD3:S,A++,  ,RD   
+#  Status=02 Mask=E Request=0 Command=03 Temp=20 MEM2MEM CH0Hold
+# 80000 : 20 20 20 20 20 xx xx 64 6C 72 6F 57 xx xx xx xx 
+# 80010 : xx xx xx xx xx xx xx xx xx xx 6C 48 48 57 6F 48 
+# 80020 : xx xx xx xx xx xx xx xx xx xx xx xx xx xx 6F 6C 
+# 
+#  ----------- HTL8237 status before Memory to Memory transfer ----------------- 
+#  CH0:A=0000 C=0000  CH1:A=001F C=0004  CH2:A=000B C=FFFF  CH3:A=000F C=FFFF
+#  MD0:B,A++,  ,RD    MD1:B,A--,  ,WR    MD2:B,A++,  ,RD    MD3:S,A++,  ,RD   
+#  Status=00 Mask=E Request=0 Command=03 Temp=20 MEM2MEM CH0Hold
+#  Test 5 Address 10000 to 8001F, Hold CH0, CH1--, fill with 48
+# External EOP asserted!
+#  EOP Memory to Memory Transfer
+#  ----------- 82C37 status after Memory to Memory transfer ---------------------- 
+#  CH0:A=0000 C=FFFE  CH1:A=001D C=0002  CH2:A=000B C=FFFF  CH3:A=000F C=FFFF
+#  MD0:B,A++,  ,RD    MD1:B,A--,  ,WR    MD2:B,A++,  ,RD    MD3:S,A++,  ,RD   
+#  Status=02 Mask=E Request=0 Command=03 Temp=43 MEM2MEM CH0Hold
+# 80000 : 20 20 20 20 20 xx xx 64 6C 72 6F 57 xx xx xx xx 
+# 80010 : xx xx xx xx xx xx xx xx xx xx 6C 48 48 57 43 43 
+# 80020 : xx xx xx xx xx xx xx xx xx xx xx xx xx xx 6F 6C 
+# 
+#  ----------- HTL8237 status before Memory to Memory transfer ----------------- 
+#  CH0:A=0000 C=0000  CH1:A=001F C=0004  CH2:A=000B C=FFFF  CH3:A=000F C=FFFF
+#  MD0:B,A++,  ,RD    MD1:B,A--,  ,WR    MD2:B,A++,  ,RD    MD3:S,A++,  ,RD   
+#  Status=00 Mask=E Request=0 Command=03 Temp=43 MEM2MEM CH0Hold
+#  Test 5 Address 10000 to 8001F, Hold CH0, CH1--, fill with 48
+# External EOP asserted!
+#  EOP Memory to Memory Transfer
+#  ----------- 82C37 status after Memory to Memory transfer ---------------------- 
+#  CH0:A=0000 C=FFFE  CH1:A=001D C=0002  CH2:A=000B C=FFFF  CH3:A=000F C=FFFF
+#  MD0:B,A++,  ,RD    MD1:B,A--,  ,WR    MD2:B,A++,  ,RD    MD3:S,A++,  ,RD   
+#  Status=02 Mask=E Request=0 Command=03 Temp=43 MEM2MEM CH0Hold
+# 80000 : 20 20 20 20 20 xx xx 64 6C 72 6F 57 xx xx xx xx 
+# 80010 : xx xx xx xx xx xx xx xx xx xx 6C 48 48 57 43 43 
+# 80020 : xx xx xx xx xx xx xx xx xx xx xx xx xx xx 6F 6C 
+# 
+#  ======================== Memory to Memory Verify/Ready Test =================== 
+# 80000 : 20 20 20 20 20 xx xx 64 6C 72 6F 57 xx xx xx xx 
+# 80010 : xx xx xx xx xx xx xx xx xx xx 6C 48 48 57 43 43 
+# 80020 : xx xx xx xx xx xx xx xx xx xx xx xx xx xx 6F 6C 
+#  ----------- HTL8237 status before Memory to Memory transfer ----------------- 
+#  CH0:A=0001 C=5555  CH1:A=0000 C=0001  CH2:A=000B C=FFFF  CH3:A=000F C=FFFF
+#  MD0:B,A++,  ,VF    MD1:B,A++,  ,VF    MD2:B,A++,  ,RD    MD3:S,A++,  ,RD   
+#  Status=00 Mask=E Request=0 Command=01 Temp=43 MEM2MEM
+#  Test 0 Address 10001 to 80000, Verify, CH0++, CH1++
+#  EOP Memory to Memory Transfer
+#  ----------- 82C37 status after Memory to Memory transfer ---------------------- 
+#  CH0:A=0003 C=5553  CH1:A=0002 C=FFFF  CH2:A=000B C=FFFF  CH3:A=000F C=FFFF
+#  MD0:B,A++,  ,VF    MD1:B,A++,  ,VF    MD2:B,A++,  ,RD    MD3:S,A++,  ,RD   
+#  Status=02 Mask=E Request=0 Command=01 Temp=43 MEM2MEM
+# 80000 : 20 20 20 20 20 xx xx 64 6C 72 6F 57 xx xx xx xx 
+# 80010 : xx xx xx xx xx xx xx xx xx xx 6C 48 48 57 43 43 
+# 80020 : xx xx xx xx xx xx xx xx xx xx xx xx xx xx 6F 6C 
+# 
+#  ----------- HTL8237 status before Memory to Memory transfer ----------------- 
+#  CH0:A=0001 C=5555  CH1:A=0000 C=0001  CH2:A=000B C=FFFF  CH3:A=000F C=FFFF
+#  MD0:B,A++,  ,VF    MD1:B,A++,  ,VF    MD2:B,A++,  ,RD    MD3:S,A++,  ,RD   
+#  Status=00 Mask=E Request=0 Command=01 Temp=43 MEM2MEM
+#  Test 0 Address 10001 to 80000, Verify+READY, CH0++, CH1++
+#  EOP Memory to Memory Transfer
+#  ----------- 82C37 status after Memory to Memory transfer ---------------------- 
+#  CH0:A=0003 C=5553  CH1:A=0002 C=FFFF  CH2:A=000B C=FFFF  CH3:A=000F C=FFFF
+#  MD0:B,A++,  ,VF    MD1:B,A++,  ,VF    MD2:B,A++,  ,RD    MD3:S,A++,  ,RD   
+#  Status=02 Mask=E Request=0 Command=01 Temp=43 MEM2MEM
+# 80000 : 20 20 20 20 20 xx xx 64 6C 72 6F 57 xx xx xx xx 
+# 80010 : xx xx xx xx xx xx xx xx xx xx 6C 48 48 57 43 43 
+# 80020 : xx xx xx xx xx xx xx xx xx xx xx xx xx xx 6F 6C 
+# 
+# ** Failure: ------- End of test ------ 
