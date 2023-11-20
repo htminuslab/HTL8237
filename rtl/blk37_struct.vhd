@@ -10,7 +10,7 @@
 --                                                                           --
 -- Version       : 1.0  20/01/2005   Created HT-LAB                          --
 --               : 1.2  08/03/2016   Changed first/last logic                --
---               : 1.3  30/11/2023   Uploaded to github under MIT license    -- 
+--               : 1.3  20/11/2023   Uploaded to github under MIT license    -- 
 --                                   checked with Questa/Modelsim 2023.4     --
 -------------------------------------------------------------------------------
 LIBRARY ieee;

@@ -10,7 +10,7 @@
 --                                                                           --
 -- Version       : 1.0  20/01/2005   Created HT-LAB                          --
 --               : 1.1  05/05/2016   Added delayed clr signal for status reg --  
---               : 1.2  30/11/2023   Uploaded to github under MIT license    --                                                       
+--               : 1.2  20/11/2023   Uploaded to github under MIT license    --                                                       
 --                                   checked with Questa/Modelsim 2023.4     --
 -------------------------------------------------------------------------------
 LIBRARY ieee;

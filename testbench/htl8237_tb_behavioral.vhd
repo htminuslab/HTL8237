@@ -10,7 +10,7 @@
 --                                                                           --
 -- Version       : 1.0  20/01/2005   Created HT-LAB                          --
 --               : 1.1  09/04/2012   Minor updates for VHDL2008              --
---               : 1.2  30/11/2023   Uploaded to github under MIT license    --                                                           
+--               : 1.2  20/11/2023   Uploaded to github under MIT license    --                                                           
 --                                   checked with Questa/Modelsim 2023.4     --
 -------------------------------------------------------------------------------
 LIBRARY ieee;
